@@ -20,6 +20,7 @@ try{
 
     // Fetching WorkSpaceId
     const terraformWorkSpaceEndpoint = "https://"+terraformHost+"/api/v2/organizations/"+organizationName+"/workspaces/"+workSpaceName;
+    console.log("terraformWorkSpaceEndpoint:"+terraformWorkSpaceEndpoint);
     const response = await axios.get(terraformWorkSpaceEndpoint,options);   
     const workSpaceId = response.data.data.id;
     console.log("workSpaceId:"+workSpaceId)
